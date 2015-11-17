@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function()
+Route::any('/', function()
 {
-	return View::make('hello');
+	$items = Vacancy::where('active', '=', 1)->orderBy('created_at', 'desc');
+	
+	return View::make('pages.home', array('items' => $items));
 });
-
-

@@ -2,6 +2,8 @@
 
 class Vacancy extends Eloquent {
 	
+	protected $table = 'vacancys';
+	
 	public function validate($data, $behavior = 'default') {
 
 		$rules = array(
