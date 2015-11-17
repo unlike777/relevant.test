@@ -14,4 +14,5 @@
 Route::any('/', array('as' => 'home', 'uses' => 'HomeController@def'));
 Route::any('/add', array('as' => 'add', 'uses' => 'VacanciesController@add'));
 Route::any('/view/{id}', array('as' => 'view', 'uses' => 'VacanciesController@view'));
+Route::any('/moder/{id}', array('as' => 'moder', 'uses' => 'VacanciesController@moder'));
 
