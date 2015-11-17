@@ -39,6 +39,8 @@
 
 		{{ Form::close() }}
 	</div>
+
+	<a href="{{ route('del', array('id' => $item->id)) }}">удалить</a>
 	
 	
 	

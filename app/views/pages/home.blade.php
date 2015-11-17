@@ -10,6 +10,7 @@
 				<div class="item__link">
 					<a href="{{ route('view', array('id' => $item->id)) }}">узнать подробнее</a>
 					<a href="{{ route('moder', array('id' => $item->id)) }}">модерация</a>
+					<a href="{{ route('del', array('id' => $item->id)) }}">удаление</a>
 				</div>
 			</div>
 		@endforeach

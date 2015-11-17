@@ -64,4 +64,15 @@ class VacanciesController extends BaseController {
 		return View::make('vacancies.view', array('item' => $obj));
 	}
 	
+	public function del($id) {
+		/**
+		 * @var $obj Vacancy
+		 */
+
+		$obj = Vacancy::findOrFail($id);
+		$obj->delete();
+		
+		return Redirect::to(route('home'));
+	}
+	
 }

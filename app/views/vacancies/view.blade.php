@@ -13,5 +13,6 @@
 	</div>
 	
 	<a href="{{ route('moder', array('id' => $item->id)) }}">модерация</a>
+	<a href="{{ route('del', array('id' => $item->id)) }}">удаление</a>
 	
 @stop
