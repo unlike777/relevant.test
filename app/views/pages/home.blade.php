@@ -5,9 +5,9 @@
 	@if ($items->count())
 		@foreach($items->get() as $item)
 			<div class="item">
-				<div class="item__title">{{ $item->title }}</div>
+				<div class="item__title"><b>{{ $item->title }}</b></div>
 				<div class="item__email">Эл. почта: {{ $item->email }}</div>
-				<div class="item__link"><a href="">узнать подробнее</a></div>
+				<div class="item__link"><a href="{{ route('view', array('id' => $item->id)) }}">узнать подробнее</a></div>
 			</div>
 		@endforeach
 	@else 

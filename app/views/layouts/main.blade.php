@@ -9,10 +9,10 @@
 
 		<div class="header">
 			<div class="site__name">
-				Биржа труда
+				<a href="{{ route('home') }}">Биржа труда</a>
 			</div>
 			
-			<div class="add"><a href="">Добавить вакансию</a></div>
+			<div class="add"><a href="{{ route('add') }}">Добавить вакансию</a></div>
 		</div>
 	
 		@yield('content')

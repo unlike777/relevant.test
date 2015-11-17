@@ -3,6 +3,7 @@
 class Vacancy extends Eloquent {
 	
 	protected $table = 'vacancys';
+	protected $fillable = array('title', 'text', 'active', 'email');
 	
 	public function validate($data, $behavior = 'default') {
 

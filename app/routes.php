@@ -11,9 +11,7 @@
 |
 */
 
-Route::any('/', function()
-{
-	$items = Vacancy::where('active', '=', 1)->orderBy('created_at', 'desc');
-	
-	return View::make('pages.home', array('items' => $items));
-});
+Route::any('/', array('as' => 'home', 'uses' => 'HomeController@def'));
+Route::any('/add', array('as' => 'add', 'uses' => 'VacanciesController@add'));
+Route::any('/view/{id}', array('as' => 'view', 'uses' => 'VacanciesController@view'));
+
