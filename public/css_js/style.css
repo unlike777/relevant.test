@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+body{font-family: 'Lato', sans-serif; width: 980px; margin: 0 auto;}
+
+a{color: #2B2B2B;}
+a:hover{color: coral;}
+
+.header{padding: 20px 0; border-bottom: 1px solid lightgrey; margin-bottom: 20px;}
+.header:after{display: block; content: ''; clear: both;}
+.site__name{float: left; font-size: 18px; font-weight: bold; text-transform: uppercase;}
+.add{float: right;}
+
+.item{margin-bottom: 25px;}
+.item__title{margin-bottom: 5px;}
+.item__email{margin-bottom: 5px;}
+.item__link a{margin-right: 5px;}
+
+.vac__email{margin-bottom: 10px; font-style: italic;}
+.vac__text{margin-top: 5px; margin-bottom: 15px;}
+.vac__title{margin-bottom: 25px;}
+
+.form{max-width: 450px;}
+.form__item{margin-bottom: 10px;}
+.form__notice{margin-bottom: 25px; color: #4288CE;}
+
+input[type="text"], input[type="password"], textarea{width: 100%; padding: 5px;}

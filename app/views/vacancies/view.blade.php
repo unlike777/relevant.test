@@ -12,4 +12,6 @@
 		{{ $item->text }}
 	</div>
 	
+	<a href="{{ route('moder', array('id' => $item->id)) }}">модерация</a>
+	
 @stop
