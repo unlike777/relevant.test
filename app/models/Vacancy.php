@@ -17,5 +17,32 @@ class Vacancy extends Eloquent {
 		return Validator::make($data, $rules);
 		
 	}
+	
+	public static function boot()
+	{
+		parent::boot();
+		
+		self::created(function($obj) {
+			
+			Mail::send('emails.vac_to_user', array('obj' => $obj), function($message) use ($obj) {
+				/**
+				 * @var $message Swift_Mailer
+				 */
+				$message->to($obj->email, 'Пользователь')
+					->from('admin@email.ru', '')
+					->subject('Вакансия успешно размещена на сайте');
+			});
+
+			Mail::send('emails.vac_to_moder', array('obj' => $obj), function($message) use ($obj) {
+				/**
+				 * @var $message Swift_Mailer
+				 */
+				$message->to('admin@email.ru', 'Пользователь')
+					->from($obj->email, '')
+					->subject('Новая вакансия на сайте');
+			});
+			
+		});
+	}
 
 }
